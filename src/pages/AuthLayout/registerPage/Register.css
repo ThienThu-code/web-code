@@ -1,0 +1,182 @@
+/* Cấu hình cho toàn bộ trang */
+body {
+  margin: 0;  /* Loại bỏ khoảng cách mặc định của body */
+  padding: 0;  /* Loại bỏ padding mặc định */
+  font-family: Arial, sans-serif;  /* Chọn phông chữ mặc định */
+  height: 100%;  /* Đảm bảo chiều cao của body chiếm toàn bộ màn hình */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container chính */
+.register-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Đảm bảo chiều cao của các phần tử bên trong đồng đều */
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  background: url(../../../assets/images/background.png) center center no-repeat;
+  background-color: #333;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  height: 100%; /* Đảm bảo chiều cao container chiếm toàn bộ chiều cao màn hình */
+  min-height: 500px;
+}
+
+/* Phần slide nền */
+.register-background-carousel {
+  flex: 1; /* Đảm bảo phần này chiếm 50% chiều rộng */
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Đặt sắp xếp theo chiều dọc */
+  justify-content: center; /* Căn giữa nội dung theo chiều dọc */
+  align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+  background-color: white;
+  border-radius: 20px;
+}
+
+.register-background-carousel .slide-image {
+  width: 100%;
+  height: auto; /* Để ảnh tự động có chiều cao phù hợp */
+  max-height: 100%; /* Đảm bảo ảnh không vượt quá chiều cao của phần container */
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 20px; /* Khoảng cách giữa hình ảnh và nội dung phía dưới */
+}
+
+/* Nếu bạn có thêm các phần tử khác bên dưới ảnh (ví dụ: tiêu đề, mô tả) */
+.register-background-carousel .content {
+  text-align: center;
+  color: #333;
+  padding: 10px;
+}
+
+
+/* Phần form đăng ký */
+.register-form-side {
+  flex: 1; /* Đảm bảo phần form chiếm 50% chiều rộng */
+  padding: 30px;
+  text-align: left;
+  border-radius: 0 15px 15px 0;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.register-form-side h2 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Các trường nhập liệu */
+.register-form input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+.register-form input:focus {
+  background-color: #e3f2fd;
+  border-color: #333;
+  outline: none;
+}
+
+/* Nút đăng ký */
+.register-form button {
+  width: 100%;
+  padding: 14px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.register-form button:hover {
+  background-color: #333;
+}
+
+.register-form button:focus {
+  background-color: #333;
+}
+
+/* Phần xác thực OTP */
+.register-OTP-form,
+.register-popup {
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+
+.register-OTP-form h2,
+.register-popup h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.register-OTP-form input,
+.register-popup input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.register-OTP-form button,
+.register-popup button {
+  width: 100%;
+  padding: 14px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.register-OTP-form button:hover,
+.register-popup button:hover {
+  background-color: #333;
+}
+
+/* Responsive design cho các màn hình nhỏ hơn */
+@media screen and (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .register-background-carousel {
+    flex: 0 0 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .register-form-side {
+    flex: 0 0 100%;
+    margin-left: 0;
+  }
+
+  .register-form {
+    padding-top: 20px;
+  }
+}

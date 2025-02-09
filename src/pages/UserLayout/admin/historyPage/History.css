@@ -1,0 +1,78 @@
+/* Cấu hình cho toàn bộ trang */
+body {
+    margin: 0;  /* Loại bỏ khoảng cách mặc định của body */
+    padding: 0;  /* Loại bỏ padding mặc định */
+    font-family: Arial, sans-serif;  /* Chọn phông chữ mặc định */
+    height: 100%;  /* Đảm bảo chiều cao của body chiếm toàn bộ màn hình */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Lịch sử điểm danh */
+  .history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Canh giữa theo chiều ngang */
+    justify-content: flex-start;  /* Canh bắt đầu theo chiều dọc */
+    padding: 10px 20px 20px;  
+    box-sizing: border-box;  /* Đảm bảo padding không làm tăng kích thước của phần tử */
+    flex-grow: 1;  /* Cho phép phần này chiếm không gian còn lại */
+    overflow: hidden;  /* Không cho phép thanh cuộn trong phần .history */
+    margin-left: 70px;
+  }
+
+  .history h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;  /* Căn giữa tiêu đề */
+  }
+
+  .attendance-history {
+    width: 100%;
+    max-width: 1200px;  /* Giới hạn chiều rộng tối đa của bảng điểm danh */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;  /* Đảm bảo padding không làm tăng kích thước */
+    margin-bottom: 20px;  /* Tạo khoảng cách dưới bảng điểm danh */
+  }
+
+/* Responsive: Thiết lập cho màn hình từ 768px đến 481px */
+@media (max-width: 768px) and (min-width: 481px) {
+  .history {
+    padding: 60px 15px 20px; /* Điều chỉnh padding cho màn hình này */
+  }
+
+  .attendance-history {
+    padding: 15px;  /* Giảm padding trong bảng điểm danh */
+  }
+
+  .history h1 {
+    font-size: 20px;  /* Giảm kích thước tiêu đề trên màn hình nhỏ */
+    margin-top: 5vh;  /* Sử dụng vh để tạo khoảng cách linh hoạt */
+  }
+}
+
+/* Responsive: Thiết lập cho màn hình nhỏ hơn 480px (điện thoại) */
+@media (max-width: 480px) {
+  .history {
+    padding: 60px 10px 20px; /* Điều chỉnh padding cho điện thoại */
+  }
+
+  .attendance-history {
+    padding: 10px;  /* Giảm padding trong bảng điểm danh */
+  }
+
+  .history h1 {
+    font-size: 18px;  /* Giảm kích thước tiêu đề trên điện thoại */
+    margin-top: 10vh;  /* Giảm khoảng cách margin-top và sử dụng vh để linh động */
+  }
+
+  .attendance-history {
+    width: 100%;  /* Đảm bảo chiều rộng của bảng điểm danh chiếm toàn bộ màn hình */
+    padding: 10px;
+  }
+}

@@ -1,0 +1,97 @@
+/* Reset padding và margin toàn bộ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Style cho phần tử chính */
+  .service-plans-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    /*background-color: #f9f9f9;*/
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin-top: 100px;
+  }
+  
+  .service-plans-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  .service-plans {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .service-plan {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+  }
+  
+  .plan-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .plan-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  .plan-features {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .plan-features li {
+    margin-bottom: 10px;
+  }
+  
+  .select-plan-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .select-plan-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .select-plan-btn:active {
+    background-color: #003f87;
+  }
+  
+  @media (max-width: 768px) {
+    .service-plans {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

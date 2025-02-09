@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex; /* Sử dụng Flexbox để căn giữa nội dung */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  background: #f4f4f4; /* Màu nền tổng thể */
+  font-family: Arial, sans-serif; /* Font tổng thể */
+}
+
+.login-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Chiều rộng tối đa của container */
+  margin: auto; /* Căn giữa container */
+  padding: 20px;
+  background: url(../../../assets/images/background.png), #333; /* Ảnh nền và màu nền */
+  background-size: cover; /* Đảm bảo hình ảnh nền luôn phủ kín */
+  background-position: center; /* Ảnh nền luôn căn giữa */
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  transition: all 0.3s ease; /* Hiệu ứng hover */
+}
+
+/* Phần carousel */
+.login-background-carousel {
+  flex: 1; /* Phần carousel chiếm 1 phần của chiều rộng */
+  display: flex; /* Dùng Flexbox để căn giữa nội dung */
+  flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều dọc */
+  align-items: center; /* Căn giữa theo chiều ngang */
+  text-align: center; /* Căn giữa nội dung văn bản */
+  padding: 20px; /* Padding xung quanh phần carousel */
+  background-color: #f9f9f9; /* Thêm nền nhẹ cho carousel */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Đảm bảo tính toán kích thước hợp lý */
+  border-radius: 15px 0 0 15px; /* Bo góc mềm mại cho phần carousel */
+}
+
+.slide-image {
+  max-width: 100%; /* Đảm bảo hình ảnh không tràn ra ngoài phần tử */
+  height: auto; /* Giữ tỷ lệ hình ảnh */
+  border-radius: 15px; /* Bo góc mềm mại cho hình ảnh */
+}
+
+.slide-content {
+  margin-top: 20px; /* Tạo khoảng cách giữa hình ảnh và văn bản */
+  transition: transform 0.3s ease; /* Thêm hiệu ứng khi slide thay đổi */
+}
+
+.slide-content h1 {
+  font-size: 28px; /* Kích thước chữ lớn cho tiêu đề */
+  color: #333; /* Màu chữ tối để dễ đọc */
+  margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+  font-weight: 600; /* Đậm cho tiêu đề */
+}
+
+.slide-content p {
+  font-size: 18px; /* Kích thước chữ vừa phải cho mô tả */
+  color: #666; /* Màu chữ nhẹ hơn */
+  line-height: 1.5; /* Tăng độ cao dòng để dễ đọc hơn */
+}
+
+/* Phần form đăng nhập */
+.login-form {
+  flex: 1; /* Phần form chiếm 1 phần của chiều rộng */
+  padding: 20px; /* Padding xung quanh form */
+  text-align: left; /* Căn trái các phần tử bên trong form */
+  box-sizing: border-box; /* Đảm bảo tính toán kích thước hợp lý */
+  border-radius: 0 15px 15px 0; /* Bo góc mềm mại cho phần form */
+  background-color: #f9f9f9; /* Thêm nền nhẹ cho carousel */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-left: 20px;
+}
+
+.login-form h2 {
+  font-size: 32px; /* Kích thước chữ lớn cho tiêu đề của form */
+  color: #333; /* Màu chữ tối để dễ đọc */
+  margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+  font-weight: 600; /* Đậm cho tiêu đề */
+  text-align: center;
+}
+
+.login-choose{
+  margin-bottom: 15px;
+}
+
+/* Các trường nhập liệu */
+.login-form input {
+  width: 100%; /* Chiều rộng của các trường input bằng với chiều rộng của form */
+  padding: 12px; /* Padding trong input */
+  margin: 10px 0; /* Khoảng cách giữa các trường nhập liệu */
+  border: 1px solid #ccc; /* Màu viền nhẹ cho các input */
+  border-radius: 8px; /* Bo góc mềm mại cho các input */
+  font-size: 16px; /* Kích thước chữ cho các input */
+  box-sizing: border-box; /* Đảm bảo tính toán kích thước hợp lý */
+  background-color: #f9f9f9; /* Nền nhẹ cho các input */
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Hiệu ứng chuyển đổi khi focus vào input */
+}
+
+.login-form input:focus {
+  background-color: #fff; /* Nền sáng hơn khi input được focus */
+  border-color: #333; /* Màu viền sáng khi input được focus */
+}
+
+/* Nút đăng nhập */
+button {
+  width: 100%; /* Chiều rộng của nút bằng với chiều rộng của form */
+  padding: 12px; /* Padding trong nút */
+  background-color: #333;/* Màu nền nút */
+  color: white; /* Màu chữ trắng cho nút */
+  border: none; /* Loại bỏ viền mặc định */
+  border-radius: 8px; /* Bo góc mềm mại cho nút */
+  cursor: pointer; /* Con trỏ thay đổi khi di chuột vào nút */
+  font-size: 16px; /* Kích thước chữ trong nút */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Hiệu ứng khi hover vào nút */
+  box-sizing: border-box; /* Đảm bảo tính toán kích thước hợp lý */
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #333; /* Màu nền thay đổi khi hover */
+  transform: translateY(-3px); /* Nút di chuyển lên một chút khi hover */
+}
+
+button:disabled {
+  background-color: #ccc; /* Màu nền khi nút bị vô hiệu hóa */
+  cursor: not-allowed; /* Con trỏ thay đổi khi nút bị vô hiệu hóa */
+}
+
+/* Phần nhận diện khuôn mặt */
+.face-recognition {
+  margin-top: 20px; /* Tạo khoảng cách trên cùng */
+}
+
+.face-recognition button {
+  width: 100%; /* Chiều rộng của nút nhận diện khuôn mặt */
+  padding: 12px; /* Padding trong nút */
+  background-color: #333; /* Màu nền của nút */
+  color: white; /* Màu chữ trắng cho nút */
+  border: none; /* Loại bỏ viền mặc định */
+  border-radius: 8px; /* Bo góc mềm mại cho nút */
+  cursor: pointer; /* Con trỏ thay đổi khi di chuột vào nút */
+  font-size: 16px; /* Kích thước chữ trong nút */
+  transition: background-color 0.3s ease; /* Hiệu ứng khi hover vào nút */
+  box-sizing: border-box; /* Đảm bảo tính toán kích thước hợp lý */
+}
+
+.face-recognition button:hover {
+  background-color: #333; /* Màu nền thay đổi khi hover vào nút */
+}
+
+.login-link{
+  margin-bottom: 10px;
+}
+
+/* Responsive design cho các màn hình nhỏ hơn */
+@media screen and (max-width: 768px) {
+  .login-container {
+    flex-direction: column; /* Chuyển thành bố cục dọc khi màn hình nhỏ */
+    padding: 10px; /* Giảm padding khi màn hình nhỏ */
+  }
+
+  .login-background-carousel {
+    border-right: none; /* Bỏ viền phải của carousel */
+    border-bottom: 1px solid #ddd; /* Thêm viền dưới khi chuyển sang bố cục dọc */
+    padding-bottom: 20px; /* Padding dưới thêm vào phần carousel */
+  }
+
+  .login-form {
+    padding-top: 20px; /* Thêm padding trên khi chuyển sang bố cục dọc */
+  }
+
+  .login-form input {
+    padding: 14px; /* Tăng padding trong các input */
+    font-size: 18px; /* Tăng kích thước chữ trong input */
+  }
+
+  button {
+    padding: 14px; /* Tăng padding trong nút */
+    font-size: 18px; /* Tăng kích thước chữ trong nút */
+  }
+
+  .slide-content h1 {
+    font-size: 24px; /* Giảm kích thước tiêu đề khi màn hình nhỏ */
+  }
+
+  .slide-content p {
+    font-size: 16px; /* Giảm kích thước chữ mô tả khi màn hình nhỏ */
+  }
+}

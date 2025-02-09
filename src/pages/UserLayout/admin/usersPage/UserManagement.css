@@ -1,0 +1,231 @@
+/* Reset lại một số thuộc tính mặc định của trình duyệt */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+  
+  /* Chỉnh nền và kiểu chữ chung cho ứng dụng */
+  .manage-user-management {
+    background-color: #f4f7fc;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Tiêu đề */
+  .manage-user-management h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #4a4a4a;
+  }
+  
+  /* Hiển thị thông báo API */
+  .manage-user-management p {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  /* Phần thêm người dùng */
+  .manage-add-user {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .manage-add-user input,
+  .manage-add-user select {
+    width: 48%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .manage-add-user button {
+    width: 48%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .manage-add-user button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Phần tìm kiếm */
+  .manage-search-user {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .manage-search-user input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Hiển thị số lượng người dùng theo vai trò */
+  .manage-user-management p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Danh sách người dùng */
+  .manage-user-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .manage-user-list li {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .manage-user-list li div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .manage-user-list span {
+    font-size: 18px;
+    color: #4a4a4a;
+  }
+  
+  .manage-user-list button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .manage-user-list button:hover {
+    background-color: #d41b1b;
+  }
+  
+  .manage-user-list button:first-child {
+    background-color: #ffc107;
+  }
+  
+  .manage-user-list button:first-child:hover {
+    background-color: #e0a800;
+  }
+  
+  /* Form chỉnh sửa */
+  .manage-user-list input,
+  .manage-user-list select {
+    width: 48%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .manage-user-list button {
+    width: 48%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .manage-user-list button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Media queries cho các thiết bị di động */
+  @media (max-width: 768px) {
+    .manage-add-user input,
+    .manage-add-user select,
+    .manage-add-user button {
+      width: 100%;
+    }
+  
+    .manage-search-user input {
+      width: 100%;
+    }
+  
+    .manage-user-list li {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .manage-user-list div {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .manage-user-list button {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .manage-user-management {
+      padding: 15px;
+    }
+  
+    .manage-user-management h2 {
+      font-size: 20px;
+    }
+  
+    .manage-add-user input,
+    .manage-add-user select,
+    .manage-add-user button {
+      padding: 8px;
+    }
+  
+    .manage-search-user input {
+      padding: 8px;
+    }
+  
+    .manage-user-list li {
+      padding: 8px;
+    }
+  
+    .manage-user-list span {
+      font-size: 16px;
+    }
+  
+    .manage-user-list button {
+      padding: 8px;
+      font-size: 14px;
+    }
+  }
+  

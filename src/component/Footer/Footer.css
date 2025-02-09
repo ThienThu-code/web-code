@@ -1,0 +1,61 @@
+/* Đặt footer ở dưới cùng */
+.footer {
+  width: 100%;
+  background-color: #F0F0F0; /* Màu nền sáng và nhẹ */
+  color: #333; /* Màu chữ tối để dễ đọc */
+  padding: 10px 20px; /* Thêm khoảng cách đều hai bên */
+  display: flex;
+  justify-content: space-between; /* Giãn đều các phần tử */
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  flex-wrap: wrap; /* Đảm bảo dòng mới nếu không đủ chỗ */
+  z-index: 1000;
+  border-top: 1px solid #ddd; /* Viền trên nhẹ tạo sự phân cách */
+  box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1); /* Bóng mờ nhẹ trên footer */
+  border-radius: 20px 20px 0 0; /* Bo tròn góc trên để mềm mại hơn */
+  transition: all 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+}
+
+/* Các phần tử trong footer theo hàng ngang */
+.footer p {
+  margin: 0;
+  padding: 0 10px; /* Tạo khoảng cách ngang giữa các phần tử */
+  display: inline-block;
+  font-size: 14px; /* Chữ nhỏ hơn để nhẹ nhàng hơn */
+}
+
+/* Các liên kết trong footer */
+.footer-link {
+  color: #4CAF50; /* Màu xanh lá nhẹ cho liên kết */
+  text-decoration: none;
+  margin-left: 10px;
+  font-weight: bold; /* Làm liên kết nổi bật một cách nhẹ nhàng */
+  transition: color 0.3s ease, transform 0.2s ease; /* Hiệu ứng chuyển động cho liên kết */
+}
+
+.footer-link:hover {
+  color: #333; /* Màu tối khi hover */
+  text-decoration: underline;
+  transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+
+/* Responsive design cho các màn hình nhỏ hơn */
+@media screen and (max-width: 768px) {
+  .footer {
+    justify-content: center; /* Canh giữa các phần tử trên màn hình nhỏ */
+    text-align: center;
+    padding: 15px; /* Thêm padding cho rộng rãi hơn */
+    border-radius: 20px 20px 0 0; /* Bo tròn góc trên */
+  }
+
+  .footer p {
+    margin: 5px 0; /* Thêm khoảng cách giữa các dòng */
+  }
+
+  .footer-link {
+    display: inline; /* Giữ liên kết theo hàng ngang trên màn hình nhỏ */
+  }
+}

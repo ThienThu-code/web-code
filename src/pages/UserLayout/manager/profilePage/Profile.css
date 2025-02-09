@@ -1,0 +1,121 @@
+/* Profile container */
+.profile-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Tiêu đề */
+  .profile-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Row thông tin */
+  .profile-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap; /* Hỗ trợ hiển thị hàng ngang xuống dòng trên màn hình nhỏ */
+  }
+  
+  .profile-row label {
+    font-weight: bold;
+    color: #555;
+    flex: 1;
+    margin-bottom: 5px; /* Thêm khoảng cách khi xuống dòng */
+  }
+  
+  .profile-row span,
+  .profile-row input,
+  .profile-row textarea {
+    flex: 2;
+    width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  /* Các nút */
+  .profile-buttons {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .profile-buttons .edit-button,
+  .profile-buttons .save-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px; /* Thêm khoảng cách giữa các nút */
+  }
+  
+  .profile-buttons .edit-button {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .profile-buttons .save-button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .profile-buttons .edit-button:hover {
+    background-color: #45a049;
+  }
+  
+  .profile-buttons .save-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .profile-container {
+      padding: 15px; /* Giảm padding trên màn hình nhỏ */
+    }
+  
+    .profile-row {
+      flex-direction: column; /* Hiển thị cột thay vì hàng ngang */
+      align-items: flex-start; /* Căn lề trái */
+    }
+  
+    .profile-row label {
+      margin-bottom: 5px; /* Thêm khoảng cách dưới nhãn */
+    }
+  
+    .profile-buttons .edit-button,
+    .profile-buttons .save-button {
+      font-size: 14px; /* Giảm kích thước chữ */
+      padding: 8px 15px; /* Giảm padding */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .profile-container {
+      margin: 20px; /* Giảm margin cho thiết bị nhỏ hơn */
+      box-shadow: none; /* Loại bỏ shadow trên thiết bị rất nhỏ */
+    }
+  
+    .profile-row input,
+    .profile-row textarea {
+      font-size: 14px; /* Giảm kích thước chữ trong input */
+      padding: 6px; /* Giảm padding */
+    }
+  
+    .profile-buttons .edit-button,
+    .profile-buttons .save-button {
+      width: 100%; /* Nút chiếm toàn bộ chiều rộng */
+      margin: 5px 0; /* Thêm khoảng cách trên dưới */
+    }
+  }
+  

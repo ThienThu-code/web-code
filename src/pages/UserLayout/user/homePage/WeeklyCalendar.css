@@ -1,0 +1,106 @@
+/* Toàn bộ lịch tuần */
+.weekly-calendar {
+  display: flex;
+  flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+  align-items: center; /* Căn giữa các phần tử */
+  padding: 5px; /* Khoảng cách bên trong để các phần tử không chạm vào cạnh */
+  border-radius: 8px; /* Bo tròn các góc của lịch */
+  margin-bottom: 10px; /* Khoảng cách giữa lịch và các phần tử phía dưới */
+}
+
+/* Phần hiển thị tháng và năm hiện tại */
+.current-month {
+  margin-bottom: 10px; /* Khoảng cách giữa tháng và tuần */
+  font-size: 18px; /* Kích thước chữ cho tháng và năm */
+}
+
+/* Các nút điều hướng (tháng, tuần) */
+.nav-buttons {
+  margin: 5px 0; /* Khoảng cách giữa các nút */
+  display: flex; /* Đặt các nút trên cùng một hàng */
+  justify-content: center; /* Căn giữa các nút */
+  gap: 10px; /* Khoảng cách giữa các nút */
+  
+}
+
+/* Đẩy các nút chuyển tuần sang bên phải */
+.nav-buttons:last-child {
+  margin-left: auto; /* Đẩy các nút này sang bên phải */
+}
+
+/* Phần hiển thị các ngày trong tuần */
+.week {
+  display: flex; /* Đặt các ngày trong tuần trên cùng một hàng */
+  justify-content: space-around; /* Chia đều khoảng cách giữa các ngày */
+  width: 100%; /* Đảm bảo chiều rộng là 100% của container */
+}
+
+/* Các ngày trong tuần */
+.day {
+  text-align: center; /* Căn giữa nội dung */
+  padding: 8px 12px; /* Khoảng cách bên trong các ô ngày */
+  cursor: pointer; /* Chỉ thị rằng các ngày có thể nhấn được */
+  border-radius: 4px; /* Bo tròn các góc của ô ngày */
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền khi hover */
+  display: flex; /* Để căn chỉnh các phần tử con */
+  flex-direction: column; /* Xếp các phần tử con theo chiều dọc */
+  align-items: center; /* Căn giữa nội dung trong mỗi ô ngày */
+}
+
+/* Phần tên ngày trong tuần (Chủ Nhật, Thứ Hai,...) */
+.day span:first-child {
+  font-weight: bold; /* Làm đậm tên ngày */
+  margin-bottom: 3px; /* Khoảng cách giữa tên ngày và ngày */
+  color: #333; /* Màu chữ */
+  font-size: 14px; /* Kích thước chữ cho tên ngày */
+}
+
+/* Phần số ngày trong tuần */
+.day span:last-child {
+  font-size: 16px; /* Kích thước chữ cho số ngày */
+  color: #555; /* Màu chữ cho ngày */
+}
+
+/* Khi ngày được chọn */
+.day.selected {
+  background-color: #007bff; /* Màu nền khi ngày được chọn */
+  color: white; /* Màu chữ trắng khi ngày được chọn */
+}
+
+/* Hiệu ứng hover cho các ngày */
+.day:hover {
+  background-color: #e0e0e0; /* Màu nền khi di chuột qua ngày */
+}
+
+/* Media Query cho các thiết bị di động */
+@media screen and (max-width: 600px) {
+  .weekly-calendar {
+    padding: 10px; /* Giảm padding cho thiết bị nhỏ */
+  }
+
+  .current-month {
+    font-size: 16px; /* Giảm kích thước chữ cho tháng và năm */
+    margin-bottom: 10px;
+  }
+
+  .nav-buttons {
+    gap: 5px; /* Giảm khoảng cách giữa các nút */
+  }
+
+  .week {
+    flex-direction: column; /* Sắp xếp các ngày theo chiều dọc trên màn hình nhỏ */
+    align-items: center; /* Căn giữa các ngày */
+  }
+
+  .day {
+    padding: 10px; /* Tăng padding một chút để dễ nhấn trên thiết bị di động */
+    font-size: 14px; /* Giảm kích thước chữ để phù hợp với màn hình nhỏ */
+  }
+}
+
+/* Media Query cho các thiết bị có màn hình lớn hơn (ví dụ: tablets, desktops) */
+@media screen and (min-width: 601px) {
+  .week {
+    flex-direction: row; /* Sắp xếp các ngày theo chiều ngang cho màn hình lớn hơn */
+  }
+}

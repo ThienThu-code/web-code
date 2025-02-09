@@ -1,0 +1,205 @@
+/* General reset for margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+  background-color: #f8f9fa;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: flex-end; /* Dồn các phần tử sang bên phải */
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
+  position: fixed; /* Đặt header ở trên cùng màn hình */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Đảm bảo header nằm trên các phần tử khác */
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Đảm bảo các liên kết chiếm toàn bộ chiều rộng */
+  justify-content: flex-end; /* Dồn các phần tử sang bên phải */
+}
+
+.header-link {
+  text-decoration: none;
+  color: #333;
+  margin-left: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.header-link:hover {
+  color: #007bff;
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+}
+
+.header-link {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  padding: 10px 0;
+  display: none;
+  z-index: 1;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.notification-section {
+  padding: 10px 0;
+}
+
+.notification-header {
+  font-weight: 600;
+  color: #007bff;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.notification-settings {
+  background-color: #f1f1f1;
+  padding: 10px 0;
+}
+
+.notification-setting {
+  padding: 5px 20px;
+}
+
+.notification-setting label {
+  font-size: 14px;
+  color: #333;
+}
+
+.notification-setting input {
+  margin-right: 10px;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+/* Hover Effect for Dropdown Menu */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .header {
+    padding: 15px 20px;
+  }
+
+  .header-link {
+    font-size: 14px;
+    margin-left: 15px;
+  }
+
+  .dropdown-menu {
+    width: 200px;
+  }
+
+  .notification-setting label {
+    font-size: 13px;
+  }
+
+  .notification-header {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 10px;
+  }
+
+  .header-link {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .dropdown-menu {
+    width: 180px;
+  }
+
+  .notification-setting label {
+    font-size: 12px;
+  }
+
+  .notification-header {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    padding: 10px 15px;
+    align-items: flex-start;
+  }
+
+  .header-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .header-link {
+    margin: 5px 0;
+  }
+
+  .dropdown-menu {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+
+  .notification-section {
+    padding: 10px;
+  }
+
+  .notification-setting label {
+    font-size: 12px;
+  }
+
+  .notification-header {
+    font-size: 14px;
+  }
+}

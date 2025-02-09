@@ -1,0 +1,108 @@
+/* Reset padding và margin toàn bộ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Đảm bảo khu vực chính luôn phù hợp với màn hình */
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh; /* Chiều cao tối thiểu là toàn bộ màn hình */
+    padding: 20px;
+    box-sizing: border-box;
+    /*background-color: red; /*m màu nền nhẹ nhàng cho toàn bộ trang */
+    margin-top: 90px;
+
+}
+
+.home h1{
+    margin-bottom: 10px;
+}
+
+/* Lịch theo tuần */
+.weekly-calendar {
+    width: 100%;
+    max-width: 800px; /* Chiều rộng tối đa *
+    min-height: 150px; /* Chiều cao tối thiểu */
+    margin-bottom: 20px;
+    background-color: #fff; /* Màu nền trắng cho lịch */
+    border-radius: 15px; /* Bo góc mềm mại */
+    padding: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Thêm đổ bóng mềm mại */
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* Hiệu ứng chuyển động nhẹ khi hover */
+}
+
+.weekly-calendar:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Đổi bóng khi hover */
+}
+
+/* Lịch trình */
+.meeting-schedule {
+    width: 100%;
+    max-width: 800px;
+    min-height: 200px;
+    background-color: #fff;
+    border-radius: 15px; /* Bo góc mềm mại */
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Hiện thanh cuộn khi cần */
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* Hiệu ứng chuyển động nhẹ khi hover */
+}
+
+.meeting-schedule:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Đổi bóng khi hover */
+}
+
+/* Responsive design: Điều chỉnh trên màn hình nhỏ */
+@media screen and (max-width: 768px) {
+    .home {
+        margin-top: 300px; /* Điều chỉnh margin-top cho màn hình nhỏ */
+    }
+
+    .weekly-calendar,
+    .meeting-schedule {
+        width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+        padding: 12px; /* Giảm padding để phù hợp màn hình nhỏ */
+        margin-bottom: 18px; /* Giảm khoảng cách giữa các phần */
+        border-radius: 12px; /* Bo góc nhỏ hơn để phù hợp với màn hình nhỏ */
+        
+    }
+
+    .meeting-card {
+        padding: 12px; /* Điều chỉnh padding của từng thẻ */
+        font-size: 15px; /* Giảm font chữ nhẹ nhàng cho màn hình nhỏ */
+    }
+
+    .no-meetings {
+        font-size: 15px;
+        padding: 30px 0; /* Giảm padding trên và dưới */
+        color: #777; /* Màu sắc nhạt cho thông báo không có cuộc họp */
+    }
+}
+
+/* Responsive design: Điều chỉnh trên màn hình rất nhỏ */
+@media screen and (max-width: 480px) {
+    .home {
+        margin-top: 20px; /* Điều chỉnh margin-top cho màn hình rất nhỏ */
+    }
+
+    .weekly-calendar,
+    .meeting-schedule {
+        padding: 8px; /* Giảm padding để phù hợp với màn hình nhỏ */
+    }
+
+    .meeting-card {
+        font-size: 13px; /* Giảm font-size thêm một chút */
+    }
+
+    .no-meetings {
+        font-size: 13px;
+        padding: 25px 0; /* Giảm padding trên và dưới */
+        color: #666; /* Màu sắc nhạt cho thông báo không có cuộc họp */
+    }
+}

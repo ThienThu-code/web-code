@@ -1,0 +1,65 @@
+/* Các kiểu cho Sidebar */
+.sidebar {
+  width: 150px;
+  height: 100vh; /* Chiều cao của sidebar sẽ chiếm hết không gian còn lại sau khi trừ header và footer */
+  background-color: #f0f4f8; /* Chọn màu nền sáng và nhẹ nhàng */
+  color: #333; /* Màu chữ đen nhẹ để dễ đọc */
+  position: fixed; /* Giữ sidebar cố định khi cuộn trang */
+  top: 55px; /* Đặt sidebar dưới header */
+  bottom: 150px;
+  left: 0;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 15px; /* Bo tròn góc sidebar để tạo cảm giác mềm mại */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Thêm bóng mờ nhẹ tạo chiều sâu */
+  transition: all 0.3s ease; /* Thêm hiệu ứng chuyển động khi thay đổi */
+  /* z-index: 999; /* Đảm bảo sidebar không bị che khuất bởi các phần tử khác */
+}
+
+/* Menu list */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Các mục trong menu */
+.menu li {
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng chuyển động mượt mà cho hover */
+  display: flex;
+  align-items: center; /* Canh giữa các icon và văn bản */
+  justify-content: flex-start; /* Đẩy icon và văn bản về bên trái */
+  border-radius: 10px; /* Bo tròn góc của mỗi mục menu */
+}
+
+.menu li:hover {
+  background-color: #e1e8f0; /* Chuyển màu nền sáng hơn khi hover */
+  transform: translateX(10px); /* Di chuyển nhẹ sang phải khi hover để tạo hiệu ứng nổi bật */
+}
+
+/* Ẩn văn bản khi màn hình nhỏ */
+.menu .menu-text {
+  margin-left: 10px; /* Khoảng cách giữa icon và văn bản */
+  transition: opacity 0.3s ease; /* Hiệu ứng mờ dần khi ẩn văn bản */
+}
+
+/* Responsive Design: khi màn hình nhỏ hơn 768px */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 60px; /* Sidebar chỉ rộng 60px trên màn hình nhỏ */
+    border-radius: 10px; /* Giảm độ bo tròn khi màn hình nhỏ */
+  }
+
+  .menu li {
+    justify-content: center; /* Căn giữa icon */
+  }
+
+  .menu .menu-text {
+    display: none; /* Ẩn văn bản khi ở màn hình nhỏ */
+  }
+}
